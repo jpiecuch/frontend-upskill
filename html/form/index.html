@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+    <title>Frontend upskill - jpiecuch</title>
+</head>
+<style>
+    body {
+        font-family: ABeeZee;
+    }
+
+    figcaption {
+        font-family: Armata;
+        font-style: italic;
+    }
+
+    p {
+        font-size: 1.1em;
+        font-weight: bold;
+        font-variant: small-caps;
+
+    }
+</style>
+<body>
+<header>My beginning of HTML 5 journey...</header>
+<nav><a href="https://www.google.pl">Tab 1</a> | <a href="https://www.linkedin.com">Tab 2</a></nav>
+<article>
+    <header>
+        <h1>HTML article</h1>
+        <p>An article should make sense on its own</p>
+    </header>
+    <section>
+        <header>
+            <h3>HTML section</h3>
+        </header>
+        <p>
+            Section is a thematic grouping of content
+            <figure>
+                <img src="picture.png">
+                <figcaption>Rocket!!!</figcaption>
+            </figure>
+
+        </p>
+        <p>
+        <h6>Pre tag</h6>
+        <pre>
+                1. Line 1
+                2. Line 2
+            </pre>
+        </p>
+        <p>
+        <form name="form" oninput="output.value=element.value+textarea.value">
+            Text input: <input type="text" name="text">
+        <br/>
+            Date input: <input type="date" name="date">
+        <br/>
+            Radio input: <input type="radio" name="radio" value="1"><input type="radio" name="radio" value="2"><input type="radio" name="radio" value="3">
+        <br/>
+            Checkbox input: <input type="checkbox" name="checkbox" value="1"><input type="checkbox" name="checkbox" value="2">
+        <br/>
+            Color input: <input type="color" name="color">
+        <br/>
+            URL input: <input type="url" name="url">
+        <br/>
+            Range input: <input type="range" name="range">
+        <br/>
+            Tel input: <input type="tel" name="tel">
+        <br/>
+            Text area: <textarea name="textarea">Default text</textarea>
+        <br/>
+            Select: <select name="select">
+                        <option value="value1">Value 1</option>
+                        <option value="value2">Value 2</option>
+                        <option value="value3">Value 3</option>
+                    </select>
+        <br/>
+            Data list: <input list="elements" name="element">
+                       <datalist id="elements">
+                           <option value="element1">E1</option>
+                           <option value="element2">E2</option>
+                           <option value="element3">E3</option>
+                       </datalist>
+        <br/>
+            Output: <output name="output" for="element textarea"></output>
+        <br/>
+        <input type="submit">
+        </form>
+        </p>
+    </section>
+</article>
+<aside>
+    <h1>Sidebar</h1>
+    <p>Articles</p>
+    <p>Contact</p>
+</aside>
+<footer>Created by: <a href="mailto:jpiecuch@pgs-soft.com">jpiecuch</a> |
+    <time datetime="2018-02-09">February 9th, 2018</time>
+</footer>
+</body>
+</html>
