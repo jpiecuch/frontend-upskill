@@ -1,0 +1,122 @@
+body {
+    font-family: ABeeZee;
+}
+
+figcaption {
+    font-family: Armata;
+    font-style: italic;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: coral;
+
+}
+
+#p-id {
+    color: brown;
+}
+
+p.p-class {
+    color: blueviolet;
+}
+
+.p-class {
+    color: crimson;
+}
+
+form {
+    border: ridge;
+    margin: 2%;
+    padding: 2%;
+}
+
+form > div {
+    margin-bottom: 5px;
+}
+
+article {
+    width: 60%;
+    float: left;
+}
+
+aside {
+    width: 30%;
+    float: left;
+}
+
+article > section {
+    border: groove;
+    margin-right: 10px;
+}
+
+footer {
+    margin-top: 5px;
+}
+
+.clear {
+    clear: left;
+}
+
+/*all div elements inside form*/
+form > div {
+    font-weight: bolder;
+}
+/*aside element just after article element*/
+article + aside {
+    text-decoration: underline;
+}
+
+/*header element just before section element */
+p ~ h6 {
+    color: tomato;
+    font-size: large;
+}
+
+/*RGB - red, green, blue intensity*/
+.text-input {
+    color: rgb(50, 179, 113);
+}
+
+/*HEX*/
+.date-input {
+    color: #6a5acd
+}
+
+/*HSL - hue, saturation, lightness*/
+.radio-input {
+    color: hsl(240, 100%, 50%);
+}
+
+/*RGBA - extension of RGBA with alpha channel (specifies opacity)*/
+.checkbox-input {
+    color: rgba(50, 179, 113, 0.3);
+}
+
+/*HSLA - extension of HSL with alpha channel (specifies opacity)*/
+.color-input {
+    color: hsla(240, 100%, 50%, 0.3);
+}
+
+.div-block {
+    border: dotted;
+    display: block;
+    width: 400px;
+    height: 100px;
+}
+
+.div-inline {
+    border: solid;
+    display: inline;
+    width: 400px;
+    height: 100px;
+}
+
+.div-inline-block {
+    border: double;
+    display: inline-block;
+    width: 400px;
+    height: 100px;
+}
