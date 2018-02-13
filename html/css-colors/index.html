@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+    <title>Frontend upskill - jpiecuch</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+<header>My beginning of HTML 5 journey...</header>
+<nav><a href="https://www.google.pl">Tab 1</a> | <a href="https://www.linkedin.com">Tab 2</a></nav>
+    <article>
+        <header>
+            <h1>HTML article</h1>
+            <p>Color taken from TAG as there is not ID or CLASS set for it</p>
+        </header>
+        <section>
+            <header>
+                <h3>HTML section</h3>
+            </header>
+            <p id="p-id">
+                Color taken from ID as it has higher priority than CLASS and TAG
+                <figure>
+                    <img src="picture.png">
+                    <figcaption>Rocket!!!</figcaption>
+                </figure>
+
+            </p>
+            <p class="p-class">
+                Color taken from CLASS as it has higher priority than TAG and there is not ID set for it
+            </p>
+            <p>
+            <h6>Pre tag</h6>
+            <pre>
+                    1. Line 1
+                    2. Line 2
+                </pre>
+            </p>
+            <p>
+            <form name="form" oninput="output.value=element.value+textarea.value">
+            <div class="text-input">Text input: <input type="text" name="text"></div>
+            <div class="date-input">Date input: <input type="date" name="date"></div>
+            <div class="radio-input">Radio input: <input type="radio" name="radio" value="1"><input type="radio" name="radio" value="2"><input type="radio" name="radio" value="3"></div>
+            <div class="checkbox-input">Checkbox input: <input type="checkbox" name="checkbox" value="1"><input type="checkbox" name="checkbox" value="2"></div>
+            <div class="color-input">Color input: <input type="color" name="color"></div>
+            <div class="url-input">URL input: <input type="url" name="url"></div>
+            <div class="range-input">Range input: <input type="range" name="range"></div>
+            <div class="tel-input">Tel input: <input type="tel" name="tel"></div>
+            <div class="text-area">Text area: <textarea name="textarea">Default text</textarea></div>
+            <div class="select">
+                Select: <select name="select">
+                            <option value="value1">Value 1</option>
+                            <option value="value2">Value 2</option>
+                            <option value="value3">Value 3</option>
+                        </select>
+            </div>
+            <div class="data-list">
+                Data list: <input list="elements" name="element">
+                           <datalist id="elements">
+                               <option value="element1">E1</option>
+                               <option value="element2">E2</option>
+                               <option value="element3">E3</option>
+                           </datalist>
+            </div>
+            <div class="output">
+                Output: <output name="output" for="element textarea"></output>
+            </div>
+            <div>
+            <input type="submit">
+            </div>
+            </form>
+            </p>
+        </section>
+    </article>
+    <aside>
+        <h1>Sidebar</h1>
+        <p>Articles</p>
+        <p>Contact</p>
+    </aside>
+    <div class="clear"> </div>
+<footer>Created by: <a href="mailto:jpiecuch@pgs-soft.com">jpiecuch</a> |
+    <time style="font-family: 'Droid Sans'" datetime="2018-02-09">February 9th, 2018</time>
+</footer>
+</body>
+</html>
