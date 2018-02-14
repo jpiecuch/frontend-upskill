@@ -1,0 +1,102 @@
+body {
+    width: 100%;
+}
+footer {
+    background-color:  #000000;
+    height: 96px;
+}
+
+.clear {
+    clear: left;
+}
+
+nav {
+    position: relative;
+    width: calc(100% - 200px);
+    left: 100px;
+    height: 194px;
+    border-bottom: solid rgba(255, 255, 255, 0.24) 1px;
+}
+
+nav div {
+    position: relative;
+    top: 78px;
+}
+
+nav div.left {
+    float: left;
+    width: 33%;
+}
+
+nav div.right {
+    float: right;
+}
+
+nav div.center {
+    text-align: center;
+    width: 33%;
+    display: inline-block;
+}
+
+nav div.center span {
+    font-family: Montserrat;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav div.right .icon:first-child {
+    margin-right: 40px;
+}
+
+nav .icon {
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+nav div.left .icon {
+    font-size: 38px;
+}
+
+nav div.left .icon {
+    font-size: 38px;
+}
+
+section.main {
+    background: url("assets/img.png");
+    width: 100%;
+    height: 1280px ;
+}
+
+section.main div.title {
+    position: relative;
+    top: 235px;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color:  #ffffff;
+    font-size: 140px;
+    font-weight: 400;
+}
+
+div.tile {
+    width: 25%;
+    height: 500px;
+    display: inline-block;
+    float: left;
+}
+
+div.tile:nth-child(1) {
+    background: url("assets/img1.png");
+}
+div.tile:nth-child(2) {
+    background: url("assets/img2.png");
+}
+div.tile:nth-child(3) {
+    background: url("assets/img3.png");
+}
+div.tile:nth-child(4) {
+    background: url("assets/img4.png");
+}
