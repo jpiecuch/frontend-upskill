@@ -30,28 +30,27 @@ body {
     border-bottom: solid rgba(255, 255, 255, 0.24) 1px;
 }
 
-.nav div {
+.nav-logo {
     position: relative;
     top: 80px;
-}
-
-.nav div.left {
     float: left;
+    font-size: 38px;
+    line-height: 38px;
 }
 
-.nav div.right {
+.nav-buttons {
     float: right;
     top: 86px;
 }
 
-.nav div.center {
+.nav-menu {
     text-align: center;
     width: 33%;
     display: inline-block;
     top: 92px;
 }
 
-.nav div.center span {
+.nav-link {
     color:  #ffffff;
     font-size: 14px;
     font-weight: 700;
@@ -60,17 +59,13 @@ body {
     padding-right: 20px;
 }
 
-.nav div.right .icon:first-child {
+.nav-button:first-child {
     margin-right: 40px;
 }
 
-.nav .icon {
+.nav-button {
     position: relative;
     color: rgb(255, 255, 255);
-}
-
-.nav div.left .icon {
-    font-size: 38px;
 }
 
 .main {
@@ -80,31 +75,30 @@ body {
     text-align: center;
 }
 
-.main div {
-    position: relative;
-    color:  #ffffff;
-}
-
-.main section {
+.main-section {
     position: relative;
     top: 240px;
 }
 
-.main div.title {
+.main-title {
     font-family: 'Playfair Display', serif;
     font-size: 140px;
     font-weight: 400;
     margin-bottom: 20px;
+    position: relative;
+    color:  #ffffff;
 }
 
-.main div.content {
+.main-content {
     font-size: 20px;
     font-weight: 300;
     width: 30%;
     margin: 0 auto;
+    position: relative;
+    color:  #ffffff;
 }
 
-.main div.pointer {
+.main-pointer {
     font-size: 14px;
     font-weight: 700;
     border-radius: 25px;
@@ -115,28 +109,33 @@ body {
     line-height: 46px;
     margin: 100px auto 0 auto;
     z-index: 2;
+    position: relative;
+    color:  #ffffff;
 }
 
-.main div.horizontal-line {
+.main-horizontal-line {
     border-bottom: 1px solid #da7074;
     width: 500px;
     margin: 0 auto;
     top: -23px;
     z-index: 1;
+    position: relative;
+    color:  #ffffff;
 }
 
-.main div.vertical-line {
+.main-vertical-line {
     height: 190px;
     width: 49%;
     display: inline-block;
+    position: relative;
 }
 
-.main div.right-line {
+.main-right-line {
     top: 70px;
     border-right: 1px solid #da7074;
 }
 
-.main div.left-line {
+.main-left-line {
     top: 90px;
     border-left: 1px solid #da7074;
 }
