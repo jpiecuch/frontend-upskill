@@ -36,14 +36,17 @@ body {
     float: left;
     font-size: 38px;
     line-height: 38px;
+    color: #ffffff;
 }
 
 .nav-buttons {
+    position: relative;
     float: right;
     top: 86px;
 }
 
 .nav-menu {
+    position: relative;
     text-align: center;
     width: 33%;
     display: inline-block;
