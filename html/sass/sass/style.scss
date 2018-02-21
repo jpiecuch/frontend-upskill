@@ -1,0 +1,273 @@
+$primary-font-stack: 'Montserrat', serif;
+$secondary-font-stack: Georgia, serif;
+$assets-path: 'assets/';
+$pointer-color: #da7074;
+$main-color: #ffffff;
+$line: 1px solid $pointer-color;
+$nav: nav;
+$main: main;
+$tile: tile;
+$info: info;
+
+@function background-url($filename) {
+  @return url($assets-path + $filename);
+}
+
+@function color($red, $green, $blue, $opacity) {
+  @return rgba($red, $green, $blue, $opacity);
+}
+
+@mixin tile-background($index) {
+  background: background-url("img" + $index + ".png");
+}
+
+@mixin border-line($position, $red, $green, $blue, $opacity) {
+  border-#{$position}: solid color($red, $green, $blue, $opacity) 1px;
+}
+
+@mixin main-line($position) {
+  @include border-line($position, 218, 112, 116, 1);
+}
+
+@mixin positioning($left, $top) {
+  position: relative;
+  @if($left) {
+    left: $left + px;
+  }
+  @if($top) {
+    top: $top + px;
+  }
+}
+
+@mixin links($width) {
+  width: $width;
+  height: 404px;
+  display: inline-block;
+  float: left;
+}
+
+@mixin content($width) {
+  width: $width;
+  margin: 0 auto;
+}
+
+@mixin info-content {
+  font-style: italic;
+  font-family: $secondary-font-stack;
+  color: #565656;
+  line-height: 1.86;
+}
+
+@each $index in 1 2 3 4 {
+  .tile:nth-child(#{$index}) {
+    @include tile-background($index);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: $primary-font-stack;
+}
+
+.#{$nav} {
+  @include positioning(100, null);
+  @include border-line(bottom, 255, 255, 255, 0.24);
+  width: calc(100% - 200px);
+  height: 194px;
+}
+
+.#{$nav}-logo {
+  @include positioning(null, 80);
+  float: left;
+  font-size: 38px;
+  line-height: 38px;
+  color: $main-color
+}
+
+.#{$nav}-buttons {
+  @include positioning(null, 86);
+  float: right;
+}
+
+.#{$nav}-menu {
+  @include positioning(null, 92);
+  text-align: center;
+  width: 33%;
+  display: inline-block;
+}
+
+.#{$nav}-link {
+  color:  $main-color;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.#{$nav}-button:first-child {
+  margin-right: 40px;
+}
+
+.#{$nav}-button {
+  @include positioning(null, null);
+  color: $main-color
+}
+
+.#{$main} {
+  background: background-url("img.png");
+  width: 100%;
+  height: 1280px;
+  text-align: center;
+}
+
+.#{$main}-right-line {
+  @include main-line(right);
+  @include positioning(null, 70);
+}
+
+.#{$main}-left-line {
+  @include positioning(null, 90);
+  @include main-line(left);
+}
+
+.#{$main}-section {
+  @include positioning(null, 240);
+}
+
+.#{$main}-title {
+  @include positioning(null, null);
+  font-family: 'Playfair Display', serif;
+  font-size: 140px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 0;
+  color:  $main-color
+}
+
+.#{$main}-content {
+  @include positioning(null, null);
+  @include content(30%);
+  font-size: 20px;
+  font-weight: 300;
+  color:  $main-color
+}
+
+.#{$main}-pointer {
+  @include positioning(null, null);
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 25px;
+  background-color: $pointer-color;
+  width: 163px;
+  height: 46px;
+  text-align: center;
+  line-height: 46px;
+  margin: 100px auto 0 auto;
+  z-index: 2;
+  color:  $main-color
+}
+
+.#{$main}-horizontal-line {
+  @include positioning(null, -23);
+  @include main-line(bottom);
+  width: 500px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.#{$main}-vertical-line {
+  @include positioning(null, null);
+  height: 190px;
+  width: 49%;
+  display: inline-block;
+}
+
+.#{$main}-play {
+  @include positioning(null, 130);
+  font-size: 80px;
+  color: $main-color;
+  font-weight: 300;
+}
+
+.#{$tile} {
+  width: 25%;
+  height: 500px;
+  float: left;
+  color: $main-color;
+  font-size: 18px;
+  text-align: center;
+}
+
+.#{$tile}-title {
+  @include positioning(null, 340);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.#{$tile}-content {
+  @include positioning(null, 345);
+  font-family: $secondary-font-stack;
+  font-style: italic;
+}
+
+.#{$info} {
+  display: block;
+  height: 404px;
+  width: 100%;
+}
+
+.#{$info}-narrow {
+  @include links(21%);
+}
+
+.#{$info}-wide {
+  @include links(37%);
+}
+
+.#{$info}-narrow-content {
+  @include content(33%);
+}
+
+.#{$info}-title {
+  @include positioning(null, 115);
+  font-weight: 700;
+  color: #141515;
+  font-size: 14px;
+}
+
+.#{$info}-narrow-list {
+  @include positioning(null, 130);
+  @include info-content;
+  list-style: none;
+  padding-left: 0;
+}
+
+.#{$info}-wide-content {
+  @include content(70%);
+}
+
+.#{$info}-wide-text {
+  @include positioning(null, 130);
+  @include info-content;
+  margin-top: 16px;
+}
+
+.footer {
+  background-color: #000000;
+  height: 96px;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: $secondary-font-stack;
+  font-style: italic;
+  font-size: 12px;
+  text-align: center;
+  line-height: 96px;
+}
+
+.clear {
+  clear: left;
+}
