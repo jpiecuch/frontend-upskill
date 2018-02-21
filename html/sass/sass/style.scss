@@ -4,10 +4,6 @@ $assets-path: 'assets/';
 $pointer-color: #da7074;
 $main-color: #ffffff;
 $line: 1px solid $pointer-color;
-$nav: nav;
-$main: main;
-$tile: tile;
-$info: info;
 
 @function background-url($filename) {
   @return url($assets-path + $filename);
@@ -73,188 +69,188 @@ body {
   font-family: $primary-font-stack;
 }
 
-.#{$nav} {
+.nav {
   @include positioning(100, null);
   @include border-line(bottom, 255, 255, 255, 0.24);
   width: calc(100% - 200px);
   height: 194px;
+
+  &-logo {
+    @include positioning(null, 80);
+    float: left;
+    font-size: 38px;
+    line-height: 38px;
+    color: $main-color
+  }
+
+  &-buttons {
+    @include positioning(null, 86);
+    float: right;
+  }
+
+  &-menu {
+    @include positioning(null, 92);
+    text-align: center;
+    width: 33%;
+    display: inline-block;
+  }
+
+  &-link {
+    color:  $main-color;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &-button:first-child {
+    margin-right: 40px;
+  }
+
+  &-button {
+    @include positioning(null, null);
+    color: $main-color
+  }
 }
 
-.#{$nav}-logo {
-  @include positioning(null, 80);
-  float: left;
-  font-size: 38px;
-  line-height: 38px;
-  color: $main-color
-}
-
-.#{$nav}-buttons {
-  @include positioning(null, 86);
-  float: right;
-}
-
-.#{$nav}-menu {
-  @include positioning(null, 92);
-  text-align: center;
-  width: 33%;
-  display: inline-block;
-}
-
-.#{$nav}-link {
-  color:  $main-color;
-  font-size: 14px;
-  font-weight: 700;
-  text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.#{$nav}-button:first-child {
-  margin-right: 40px;
-}
-
-.#{$nav}-button {
-  @include positioning(null, null);
-  color: $main-color
-}
-
-.#{$main} {
+.main {
   background: background-url("img.png");
   width: 100%;
   height: 1280px;
   text-align: center;
+
+  &-right-line {
+    @include main-line(right);
+    @include positioning(null, 70);
+  }
+
+  &-left-line {
+    @include positioning(null, 90);
+    @include main-line(left);
+  }
+
+  &-section {
+    @include positioning(null, 240);
+  }
+
+  &-title {
+    @include positioning(null, null);
+    font-family: 'Playfair Display', serif;
+    font-size: 140px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color:  $main-color
+  }
+
+  &-content {
+    @include positioning(null, null);
+    @include content(30%);
+    font-size: 20px;
+    font-weight: 300;
+    color:  $main-color
+  }
+
+  &-pointer {
+    @include positioning(null, null);
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 25px;
+    background-color: $pointer-color;
+    width: 163px;
+    height: 46px;
+    text-align: center;
+    line-height: 46px;
+    margin: 100px auto 0 auto;
+    z-index: 2;
+    color:  $main-color
+  }
+
+  &-horizontal-line {
+    @include positioning(null, -23);
+    @include main-line(bottom);
+    width: 500px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  &-vertical-line {
+    @include positioning(null, null);
+    height: 190px;
+    width: 49%;
+    display: inline-block;
+  }
+
+  &-play {
+    @include positioning(null, 130);
+    font-size: 80px;
+    color: $main-color;
+    font-weight: 300;
+  }
 }
 
-.#{$main}-right-line {
-  @include main-line(right);
-  @include positioning(null, 70);
-}
-
-.#{$main}-left-line {
-  @include positioning(null, 90);
-  @include main-line(left);
-}
-
-.#{$main}-section {
-  @include positioning(null, 240);
-}
-
-.#{$main}-title {
-  @include positioning(null, null);
-  font-family: 'Playfair Display', serif;
-  font-size: 140px;
-  font-weight: 400;
-  margin-bottom: 20px;
-  margin-top: 0;
-  color:  $main-color
-}
-
-.#{$main}-content {
-  @include positioning(null, null);
-  @include content(30%);
-  font-size: 20px;
-  font-weight: 300;
-  color:  $main-color
-}
-
-.#{$main}-pointer {
-  @include positioning(null, null);
-  font-size: 14px;
-  font-weight: 700;
-  border-radius: 25px;
-  background-color: $pointer-color;
-  width: 163px;
-  height: 46px;
-  text-align: center;
-  line-height: 46px;
-  margin: 100px auto 0 auto;
-  z-index: 2;
-  color:  $main-color
-}
-
-.#{$main}-horizontal-line {
-  @include positioning(null, -23);
-  @include main-line(bottom);
-  width: 500px;
-  margin: 0 auto;
-  z-index: 1;
-}
-
-.#{$main}-vertical-line {
-  @include positioning(null, null);
-  height: 190px;
-  width: 49%;
-  display: inline-block;
-}
-
-.#{$main}-play {
-  @include positioning(null, 130);
-  font-size: 80px;
-  color: $main-color;
-  font-weight: 300;
-}
-
-.#{$tile} {
+.tile {
   width: 25%;
   height: 500px;
   float: left;
   color: $main-color;
   font-size: 18px;
   text-align: center;
+
+  &-title {
+    @include positioning(null, 340);
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  &-content {
+    @include positioning(null, 345);
+    font-family: $secondary-font-stack;
+    font-style: italic;
+  }
 }
 
-.#{$tile}-title {
-  @include positioning(null, 340);
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.#{$tile}-content {
-  @include positioning(null, 345);
-  font-family: $secondary-font-stack;
-  font-style: italic;
-}
-
-.#{$info} {
+.info {
   display: block;
   height: 404px;
   width: 100%;
-}
 
-.#{$info}-narrow {
-  @include links(21%);
-}
+  &-narrow {
+    @include links(21%);
+  }
 
-.#{$info}-wide {
-  @include links(37%);
-}
+  &-wide {
+    @include links(37%);
+  }
 
-.#{$info}-narrow-content {
-  @include content(33%);
-}
+  &-narrow-content {
+    @include content(33%);
+  }
 
-.#{$info}-title {
-  @include positioning(null, 115);
-  font-weight: 700;
-  color: #141515;
-  font-size: 14px;
-}
+  &-title {
+    @include positioning(null, 115);
+    font-weight: 700;
+    color: #141515;
+    font-size: 14px;
+  }
 
-.#{$info}-narrow-list {
-  @include positioning(null, 130);
-  @include info-content;
-  list-style: none;
-  padding-left: 0;
-}
+  &-narrow-list {
+    @include positioning(null, 130);
+    @include info-content;
+    list-style: none;
+    padding-left: 0;
+  }
 
-.#{$info}-wide-content {
-  @include content(70%);
-}
+  &-wide-content {
+    @include content(70%);
+  }
 
-.#{$info}-wide-text {
-  @include positioning(null, 130);
-  @include info-content;
-  margin-top: 16px;
+  &-wide-text {
+    @include positioning(null, 130);
+    @include info-content;
+    margin-top: 16px;
+  }
 }
 
 .footer {
