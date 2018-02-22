@@ -41,9 +41,10 @@ body {
     width: 33%;
     display: inline-block; }
   .nav-link {
-    color: #ffffff;
     font-size: 14px;
     font-weight: 700;
+    color: #ffffff;
+    font-family: "Montserrat", serif;
     text-align: center;
     padding-left: 20px;
     padding-right: 20px; }
@@ -88,6 +89,8 @@ body {
     position: relative;
     font-size: 14px;
     font-weight: 700;
+    color: #ffffff;
+    font-family: "Montserrat", serif;
     border-radius: 25px;
     background-color: #da7074;
     width: 163px;
@@ -95,8 +98,7 @@ body {
     text-align: center;
     line-height: 46px;
     margin: 100px auto 0 auto;
-    z-index: 2;
-    color: #ffffff; }
+    z-index: 2; }
   .main-horizontal-line {
     position: relative;
     top: -23px;
@@ -138,45 +140,46 @@ body {
   display: block;
   height: 404px;
   width: 100%; }
+  .info-title {
+    position: relative;
+    top: 115px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #141515;
+    font-family: "Montserrat", serif; }
   .info-narrow {
     width: 21%;
     height: 404px;
     display: inline-block;
     float: left; }
+    .info-narrow-content {
+      width: 33%;
+      margin: 0 auto; }
+    .info-narrow-list {
+      position: relative;
+      top: 130px;
+      font-style: italic;
+      font-family: Georgia, serif;
+      color: #565656;
+      line-height: 1.86;
+      list-style: none;
+      padding-left: 0; }
   .info-wide {
     width: 37%;
     height: 404px;
     display: inline-block;
     float: left; }
-  .info-narrow-content {
-    width: 33%;
-    margin: 0 auto; }
-  .info-title {
-    position: relative;
-    top: 115px;
-    font-weight: 700;
-    color: #141515;
-    font-size: 14px; }
-  .info-narrow-list {
-    position: relative;
-    top: 130px;
-    font-style: italic;
-    font-family: Georgia, serif;
-    color: #565656;
-    line-height: 1.86;
-    list-style: none;
-    padding-left: 0; }
-  .info-wide-content {
-    width: 70%;
-    margin: 0 auto; }
-  .info-wide-text {
-    position: relative;
-    top: 130px;
-    font-style: italic;
-    font-family: Georgia, serif;
-    color: #565656;
-    line-height: 1.86;
-    margin-top: 16px; }
+    .info-wide-content {
+      width: 70%;
+      margin: 0 auto; }
+    .info-wide-text {
+      position: relative;
+      top: 130px;
+      font-style: italic;
+      font-family: Georgia, serif;
+      color: #565656;
+      line-height: 1.86;
+      margin-top: 16px; }
 
 .footer {
   background-color: #000000;
