@@ -1,3 +1,15 @@
+.info-narrow-list, .info-wide-text {
+  font-style: italic;
+  font-family: Georgia, serif;
+  color: #565656;
+  line-height: 1.86; }
+
+.nav-link, .main-pointer {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Montserrat", serif; }
+
 .tile:nth-child(1) {
   background: url("assets/img1.png"); }
 
@@ -41,10 +53,6 @@ body {
     width: 33%;
     display: inline-block; }
   .nav-link {
-    font-size: 14px;
-    font-weight: 700;
-    color: #ffffff;
-    font-family: "Montserrat", serif;
     text-align: center;
     padding-left: 20px;
     padding-right: 20px; }
@@ -87,10 +95,6 @@ body {
     color: #ffffff; }
   .main-pointer {
     position: relative;
-    font-size: 14px;
-    font-weight: 700;
-    color: #ffffff;
-    font-family: "Montserrat", serif;
     border-radius: 25px;
     background-color: #da7074;
     width: 163px;
@@ -158,10 +162,6 @@ body {
     .info-narrow-list {
       position: relative;
       top: 130px;
-      font-style: italic;
-      font-family: Georgia, serif;
-      color: #565656;
-      line-height: 1.86;
       list-style: none;
       padding-left: 0; }
   .info-wide {
@@ -175,10 +175,6 @@ body {
     .info-wide-text {
       position: relative;
       top: 130px;
-      font-style: italic;
-      font-family: Georgia, serif;
-      color: #565656;
-      line-height: 1.86;
       margin-top: 16px; }
 
 .footer {
