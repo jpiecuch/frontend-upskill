@@ -1,0 +1,42 @@
+.nav {
+  @include positioning(100, null);
+  @include border-line(bottom, 255, 255, 255, 0.24);
+  width: calc(100% - 200px);
+  height: 194px;
+
+  &-logo {
+    @include positioning(null, 80);
+    float: left;
+    font-size: 38px;
+    line-height: 38px;
+    color: $primary-color
+  }
+
+  &-buttons {
+    @include positioning(null, 86);
+    float: right;
+  }
+
+  &-menu {
+    @include positioning(null, 92);
+    text-align: center;
+    width: 33%;
+    display: inline-block;
+  }
+
+  &-link {
+    @extend %primary-font;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &-button:first-child {
+    margin-right: 40px;
+  }
+
+  &-button {
+    @include positioning(null, null);
+    color: $primary-color;
+  }
+}

@@ -1,0 +1,39 @@
+.info {
+  display: block;
+  height: 404px;
+  width: 100%;
+
+  &-title {
+    @include positioning(null, 115);
+    @include font($primary-font-stack, $primary-font-size, $primary-font-weight, #141515);
+  }
+
+  &-narrow {
+    @include links(21%);
+
+    &-content {
+      @include content(33%);
+    }
+
+    &-list {
+      @include positioning(null, 130);
+      @extend %info-content;
+      list-style: none;
+      padding-left: 0;
+    }
+  }
+
+  &-wide {
+    @include links(37%);
+
+    &-content {
+      @include content(70%);
+    }
+
+    &-text {
+      @include positioning(null, 130);
+      @extend %info-content;
+      margin-top: 16px;
+    }
+  }
+}

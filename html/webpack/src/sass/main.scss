@@ -1,0 +1,73 @@
+.main {
+  background: background-url("img.png");
+  width: 100%;
+  height: 1280px;
+  text-align: center;
+
+  &-right-line {
+    @include main-line(right);
+    @include positioning(null, 70);
+  }
+
+  &-left-line {
+    @include positioning(null, 90);
+    @include main-line(left);
+  }
+
+  &-section {
+    @include positioning(null, 240);
+  }
+
+  &-title {
+    @include positioning(null, null);
+    font-family: 'Playfair Display', serif;
+    font-size: 140px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: $primary-color;
+  }
+
+  &-content {
+    @include positioning(null, null);
+    @include content(30%);
+    font-size: 20px;
+    font-weight: 300;
+    color: $primary-color;
+  }
+
+  &-pointer {
+    @include positioning(null, null);
+    @extend %primary-font;
+    border-radius: 25px;
+    background-color: $pointer-color;
+    width: 163px;
+    height: 46px;
+    text-align: center;
+    line-height: 46px;
+    margin: 100px auto 0 auto;
+    z-index: 2;
+  }
+
+  &-horizontal-line {
+    @include positioning(null, -23);
+    @include main-line(bottom);
+    width: 500px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+
+  &-vertical-line {
+    @include positioning(null, null);
+    height: 190px;
+    width: 49%;
+    display: inline-block;
+  }
+
+  &-play {
+    @include positioning(null, 130);
+    font-size: 80px;
+    color: $primary-color;
+    font-weight: 300;
+  }
+}

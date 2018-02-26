@@ -1,0 +1,105 @@
+$primary-font-stack: 'Montserrat', serif;
+$secondary-font-stack: Georgia, serif;
+$assets-path: '../assets/';
+$pointer-color: #da7074;
+$primary-color: #ffffff;
+$line: 1px solid $pointer-color;
+$primary-font-size: 14px;
+$primary-font-weight: 700;
+
+@function background-url($filename) {
+  @return url($assets-path + $filename);
+}
+
+@function color($red, $green, $blue, $opacity) {
+  @return rgba($red, $green, $blue, $opacity);
+}
+
+@mixin tile-background($index) {
+  background: background-url("img" + $index + ".png");
+}
+
+@mixin border-line($position, $red, $green, $blue, $opacity) {
+  border-#{$position}: solid color($red, $green, $blue, $opacity) 1px;
+}
+
+@mixin main-line($position) {
+  @include border-line($position, 218, 112, 116, 1);
+}
+
+@mixin font($font, $size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  font-family: $font;
+}
+
+@mixin positioning($left, $top) {
+  position: relative;
+  @if($left) {
+    left: $left + px;
+  }
+  @if($top) {
+    top: $top + px;
+  }
+}
+
+@mixin links($width) {
+  width: $width;
+  height: 404px;
+  display: inline-block;
+  float: left;
+}
+
+@mixin content($width) {
+  width: $width;
+  margin: 0 auto;
+}
+
+%info-content {
+  font-style: italic;
+  font-family: $secondary-font-stack;
+  color: #565656;
+  line-height: 1.86;
+}
+
+%primary-font {
+  @include font($primary-font-stack, $primary-font-size, $primary-font-weight, $primary-color);
+}
+
+@each $index in 1 2 3 4 {
+  .tile:nth-child(#{$index}) {
+    @include tile-background($index);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: $primary-font-stack;
+}
+
+@import "../css/normalize.css";
+@import "nav.scss";
+@import "main.scss";
+@import "tile.scss";
+@import "info.scss";
+
+
+.footer {
+  background-color: #000000;
+  height: 96px;
+  color: rgba(255, 255, 255, 0.3);
+  font-family: $secondary-font-stack;
+  font-style: italic;
+  font-size: 12px;
+  text-align: center;
+  line-height: 96px;
+}
+
+.clear {
+  clear: left;
+}
