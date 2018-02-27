@@ -16,13 +16,6 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.css$/,
-            use: [
-              'style-loader',
-              'css-loader'
-            ]
-        },
-        {
             test: /\.scss$/,
             use: extractSass.extract({
                 use: [{
@@ -33,8 +26,7 @@ module.exports = {
                 // use style-loader in development
                 fallback: "style-loader"
             })
-        },
-        {
+        }, {
             test: /\.(jpg|jpeg|png|svg|gif)$/,
             use: {
                 loader: 'file-loader',
@@ -42,8 +34,7 @@ module.exports = {
                     name: './assets/[name].[ext]',
                 }
             }
-        }
-        ]
+        }]
     },
     plugins: [
         new HtmlWebpackPlugin({
